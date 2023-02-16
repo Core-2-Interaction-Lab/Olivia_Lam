@@ -1,0 +1,55 @@
+/*font-family: 'Raleway', sans-serif;*/
+
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 5%;
+    background-color: #ede7cc;
+}
+
+#titlediv {
+    padding-top: 2%;
+}
+
+#title {
+    font-weight: 600;
+    font-size: 5em;
+    overflow: hidden;
+    background: linear-gradient(90deg, #ede7cc, #000, #ede7cc);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 5s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+@keyframes animate {
+    0% {
+        background-position: -500%;
+    }
+    100% {
+        background-position: 500%;
+    }
+}
+
+#author {
+    font-weight: 100;
+    font-style: italic;
+    font-size: 2em;
+}
+
+#passagediv {
+    padding-left: 50%;
+}
+
+#passage {
+    font-size: 1em;
+    padding-top: 5%;
+    text-align: right;
+}
+
+#name {
+    font-weight: 300;
+}
+
+#course {
+    font-weight: 500;
+}
