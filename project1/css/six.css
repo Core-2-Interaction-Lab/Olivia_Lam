@@ -1,0 +1,77 @@
+html {
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: auto;
+    background: linear-gradient(to right, black 25%, #1d1515, black 75%);
+    display: grid;
+    justify-items: center;
+    perspective: 500px;
+    perspective-origin: center center;
+    perspective-origin: center calc((var(--s, 1) * 1px) + 50%);
+  }
+  
+  .box {
+    background: linear-gradient(to right, rgb(154, 154, 154) 70%, #615c5c);
+    width: 100vw;
+    height: 100px;
+    transform-style: preserve-3d;
+    transform: translateX(-50%) rotateY(65deg);
+    transform-origin: right center;
+  }
+  
+  .box2 {
+    background: linear-gradient(to left, rgb(109, 106, 106) 70%, #413d3d);
+    transform: translateX(50%) rotateY(-65deg);
+    transform-origin: left center;
+  }
+
+#textdiv {
+    z-index: 1000;
+    position: absolute;
+    margin: 10%;
+    width: 20%;
+}
+
+#text {
+    color: #ede7cc;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 1em;
+}
+  
+.block {
+  display: block;
+  font-family: 'Raleway';
+  width: 100%;
+  border: none;
+  background-color: white; 
+  opacity: 50%;
+  padding: 14px 28px;
+  font-size: 1em;
+  cursor: pointer;
+  text-align: center;
+}
+
+.block:hover {
+  background-color: black;
+  opacity: 50%;
+  color: white;
+}
+
+a:link, a:visited {
+  color: grey;
+  text-decoration: none;
+  cursor: grab;
+}
+
+a:link:active, a:visited:active {
+  color: grey;
+ text-decoration: none;
+}

@@ -1,0 +1,285 @@
+/* Start */
+
+html {
+    margin : 0;
+    padding  : 0;
+}
+
+body {
+    margin : 0;
+    padding : 0;
+    width : 100%;
+    height: 100vh;
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color : #000000;
+    overflow : hidden;
+}
+
+#info {
+    font-size: 0.8em;
+    text-align: right;
+    color: #7d7d7d;
+}
+
+/* Intro */
+
+#intro {
+    position : absolute;
+    height: 100vh;
+    width: 100vw;
+    /*background-image: url('https://johandavid.fr/images/intro_shadows.gif') ;
+    background-size : cover;*/
+    background-color: #ede7cc;
+    background-position: 50% 50%;
+    z-index : 999;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    transition : transform 800ms;
+}
+
+.intro-leaves {
+    transform : translateY(-100%);
+}
+
+#pass-intro {
+    transition : transform 200ms;
+    border : 0.1px solid #ede7cc;
+}
+
+#pass-intro:hover {
+    background-color: #ede7cc;
+    color: #212121;
+    box-shadow : -15px 15px 0px #212121;
+    filter : blur(1px);
+}
+
+
+/* Light Button */
+
+#wrap-button, #pass-intro {
+    position : absolute;
+    padding: 10px;
+    width: 550px;
+    height: 230px;
+    background-color: #212121;
+    color: #ede7cc;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+    text-align: justify;
+    cursor: pointer;
+    line-height: 1.1;
+    /*letter-spacing: 1px;*/
+    user-select : none;
+}
+
+#wrap-button:before, #wrap-button:after {
+    position : absolute;
+    content : '';
+    background: linear-gradient(90deg, #1e2529, #ede7cc);
+    background-size : 800% 100%;
+    top : -3px;
+    bottom : -3px;
+    left: -3px;
+    right: -3px;
+    z-index: -1;
+}
+
+#wrap-button:after {
+    filter : blur(8px);
+}
+
+.button-on:before, .button-on:after {
+    animation : lightRotating 400ms forwards;
+}
+
+#wrap-message {
+    position : absolute;
+    top : 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow : hidden;
+}
+
+#message-1, #message-2 {
+    padding: 10px;
+    width: 550px;
+    height: 230px;
+    transition : transform 200ms;
+}
+
+.up {
+    transform : translateY(-250px);
+}
+
+
+/* Back light */
+
+#lighted-zone {
+    position : absolute;
+    width : 200vw;
+    height: 200vh;
+    top: -50%;
+    left : -50%;
+    background: radial-gradient(closest-side, #484848, #2f2f2f, #181818, #0e0e0e, black);
+    z-index : -2;
+    opacity : 0;
+}
+
+.lighted-zone-on {
+    animation : zone-on 600ms forwards;
+}
+
+
+/* Circles */
+
+.circle-body {
+    position : absolute;
+    height : 40px;
+    width: 40px;
+    border-radius: 40px;
+    background-color: #646464;
+    z-index : 1;
+}
+
+.circle {
+    position : absolute;
+    height : 40px;
+    width: 40px;
+    filter: brightness(0%);
+    opacity : 0;
+}
+
+.circle-on {
+    animation : zone-on 600ms forwards;
+}
+
+
+/* Shadows */
+
+.wrap-shadow {
+    position : absolute;
+    top: 20px;
+    width: 40px;
+    height : 600px;
+    transform-origin: top;
+    transform : perspective(600px) rotateX(40deg);
+}
+
+.shadow {
+    height : 100%;
+    width : 100%;
+    background : linear-gradient( rgba(0, 0, 0, 0.3) 10% , transparent 100% );
+    position : absolute;
+}
+
+.shadow-blur {
+    height : 100%;
+    width : 100%;
+    background : linear-gradient( transparent 10%, rgba(0, 0, 0, 0.8) 70%, transparent 90% );
+    filter : blur(4px);
+    position : absolute;
+}
+
+
+/* Panel (not implemented yet) */
+
+/*#panel {
+    position : absolute;
+    top : 15px;
+    left: 15px;
+    z-index: 999;
+}
+
+#message-panel {
+    font-family: 'Raleway', sans-serif;
+    font-size : 1.3em;
+    color : #ede7cc;
+}
+
+#wrap-colored-dots {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    background-color: #606060;
+    flex-direction: row;
+    align-items: center;
+}
+
+.colored-dot {
+    height: 14px;
+    width: 14px;
+    border-radius: 10px;
+    border: 1px solid #262626;
+    cursor: pointer;
+    margin: 0px 10px 0px 10px;
+}
+
+.colored-dot:hover {
+    border : 1px solid white;
+}
+
+.red-dot { background-color : red; }
+.green-dot { background-color : green; }
+.blue-dot { background-color : blue; }
+.white-dot { background-color : white; }*/
+
+
+/* Animations */
+
+@keyframes lightRotating {
+    0% {
+        background-position : 0%;
+    }
+
+    100% {
+        background-position : 100%;
+    }
+}
+
+@keyframes zone-on {
+    0% {
+        opacity : 0;
+    }
+
+    100% {
+        opacity : 1;
+    }
+}
+
+.block {
+    display: block;
+    z-index: 1100;
+    font-family: 'Raleway';
+    width: 100%;
+    border: none;
+    background-color: white; 
+    opacity: 50%;
+    padding: 14px 28px;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .block:hover {
+    background-color: black;
+    opacity: 50%;
+    color: white;
+  }
+  
+  a:link, a:visited {
+    color: grey;
+    text-decoration: none;
+    cursor: grab;
+  }
+  
+  a:link:active, a:visited:active {
+    color: grey;
+   text-decoration: none;
+  }
+
