@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Skia';
+    src: url('Skia.woff2') format('truetype');
+    font-style: normal;
+    /*font-display: swap;*/
+  }
+
+body {
+    font-family: 'Skia';
+    font-size: 2em;
+    margin: 4%;
+    background-color: #6a6d51;
+}
+
+#div {
+    /*border: #833037 solid 3px;
+    padding: 50px;*/
+    
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+#div2 {
+    text-align: left;
+    color: #fff;
+}
+
+#heading {
+    color: white;
+}
+
+#title {
+    font-weight: 700;
+    font-size: 7em;
+    color: #82b448;
+}
+
+#contents {
+    font-weight: 600;
+    font-size: 5em;
+    color: white;
+}
+
+#number {
+    font-weight: 700;
+    font-size: 5em;
+    color: #b62d3b;
+}
+
+#caption { 
+    color: #82b448;
+}
+
+hr {
+    border-top: 5px solid #b62d3b;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+

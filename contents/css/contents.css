@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'Skia';
+    src: url('Skia.woff2') format('truetype');
+    font-style: normal;
+    /*font-display: swap;*/
+  }
+
+
+  a {
+    --s: 0.1em;   
+    --c: #85b042; 
+    
+    color: #0000;
+    padding-bottom: var(--s);
+    background: 
+      linear-gradient(90deg,var(--c) 50%,#000 0) calc(100% - var(--_p,0%))/200% 100%,
+      linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
+    -webkit-background-clip: text,padding-box;
+            background-clip: text,padding-box;
+    transition: 0.5s;
+  }
+
+  a:hover {--_p: 100%}
+  
+  body {
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    place-content: center;
+    font-family: 'Skia';
+    background-color: #4b4951;
+  }
+
+  a {
+    font-size: 5rem;
+    cursor: pointer;
+    line-height: 1.5em;
+  }
+
+  h1 {
+    color: #f2521b;
+  }
