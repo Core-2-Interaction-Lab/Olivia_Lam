@@ -1,0 +1,227 @@
+
+/* font-family: 'Poppins', sans-serif; */
+
+:root {
+	--spacing: 1em;
+}
+
+#divpic {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#bgpic {
+    opacity: 70%;
+    padding-top: 40px;
+    position: fixed;
+    z-index: -10;
+    height: 650px;
+    cursor:auto;
+}
+
+.is-hidden {
+    display: none;
+}
+
+
+
+body {
+	font-family: 'Poppins';
+	padding: calc(2*var(--spacing)) calc(2*var(--spacing)) calc(4 * var(--spacing));
+    background-color:#5c191f;
+    color: #a5be92;
+    cursor: url('../jpg/redstar.png'), auto;
+}
+
+* {
+    cursor: url('../jpg/redstar.png'), auto;
+}
+
+body * {
+	font-weight: 400;
+    /*font-size: 1em;*/
+}
+
+p {
+    font-size: 1em;
+    line-height: 0.5em;
+}
+
+h1 {
+	font-size: 4.5em;
+    font-weight: 200;
+}
+
+nav {
+    padding: 20px;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    transition: top 0.3s;
+}
+
+button {
+    cursor: url('../jpg/redstar2.png'), auto;
+    padding: 10px 15px;
+    border: 1px solid #cee6ae;
+    border-radius: 10px;
+    background-color: #3a582e;
+}
+
+button:hover {
+    background-color: #a44441;
+    border: 1px solid #824b3d;
+  }
+
+  .dropdown {
+    display: inline-block;
+    column-gap: 10px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .dropdown-content {
+    color: #cee6ae;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    width: 110px;
+    flex-direction: column;
+  }
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 200;
+}
+
+h4 {
+    font-weight: 400;
+    line-height: 1.2em;
+    color: #c45f57;
+}
+
+h5 {
+    font-weight: 200;
+    font-size: 1em;
+    line-height: 0.5em;
+    color: #d40000;
+}
+
+#author {
+    font-size: 1.8em;
+    font-weight: 400;
+}
+
+#link, #link2 {
+    --s: 0.1em;   
+    --c: #a5be92; 
+    
+    color: #0000;
+    padding-bottom: var(--s);
+    background: 
+      linear-gradient(90deg,var(--c) 50%,#000 0) calc(100% - var(--_p,0%))/200% 100%,
+      linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
+    -webkit-background-clip: text,padding-box;
+            background-clip: text,padding-box;
+    transition: 0.5s;
+  }
+
+#link2 {
+    opacity: 30%;
+}
+
+#link:hover, #link2:hover {
+    --_p: 100%;
+}
+#link:visited, #link2:visited {
+    text-decoration: none;
+}
+
+ul {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: calc(3 * var(--spacing));
+	margin-top: calc(3 * var(--spacing));
+	list-style: none;
+}
+
+li {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing);
+}
+
+summary {
+	cursor: url('../jpg/redstar2.png'), auto;
+}
+
+
+@media (max-width: 950px) {
+
+    h2 {
+        font-size: 1.8em;
+        font-weight: 400;
+    }
+
+    body {
+        font-size: 0.5em;
+    }
+
+    .dropdown-content {
+        width: 75px;
+        padding: 5px;
+      }
+
+    #bgpic {
+        padding-top: 60px;
+        transition: ease 0.5s;
+    } 
+
+}
+
+@media (max-width: 650px) {
+
+    h1 {
+	font-size: 4em;
+    }
+
+    #author {
+        font-size: 2em;
+    }
+
+    h2 {
+    font-size: 1.2em;
+    }
+
+    body {
+    font-size: 0.5em;
+    }
+
+    ul {
+		grid-template-columns: 1fr 1fr;
+    }
+
+    .dropdown-content {
+        width: 75px;
+        padding: 5px;
+      }
+
+    #bgpic {
+        padding-top: 70px;
+        height: 600px;
+        transition: ease 0.5s;
+    } 
+
+}
