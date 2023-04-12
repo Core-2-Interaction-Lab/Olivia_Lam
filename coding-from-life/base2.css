@@ -1,0 +1,177 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: black;
+	margin: 0;
+}
+
+.canvas {
+	z-index: -200;
+	max-width: 900px;
+	height: 550px;
+	margin: 60px auto;
+	background: #9595c3;
+	position: relative;
+}
+
+#table {
+	z-index: -100;
+	position: absolute;
+	width: 1000px;
+	height: 200px;
+	border-radius: 5px 5px 5px 5px;
+	transform: skew(60deg);
+	background-image: linear-gradient(to right, #f1e9da,#c8c8e8,#f1e9da);
+	translate: -30px 350px;
+  }
+
+#lamptop {
+	position: absolute;
+	z-index: 9;
+	height: 120px;
+	width: 210px;
+	border-radius: 80px 80px 0 0;
+	background: linear-gradient(to bottom, #29172f, #523d5c,#625267);
+	translate: 220px 130px;
+}
+
+#lampplug {
+	z-index: 10;
+	width: 5px;
+	height: 20px;
+	background: rgb(43, 30, 0);
+	border-radius: 20%;
+	position: absolute;
+	translate: 305px 400px;
+}
+
+#lampbottom {
+	position: absolute;
+	z-index: 8;
+	width: 80px;
+	height: 250px;
+	border-radius: 5px 5px 5px 5px;
+	translate: 287px 200px;
+	background: linear-gradient(to top, #684d71, #ffaa00,#ffd000)
+}
+
+#lampshadow {
+	cursor: pointer;
+	position: absolute;
+	z-index: 2;
+	width: 230px;
+	background: rgb(255,245,159);
+	border-radius: 200px / 100px;
+	height: 100px;
+	translate: 215px 400px;
+	filter: blur(10px);
+	animation: flash 5s infinite;
+}
+
+@keyframes flash {
+	0%, 100% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 100;
+	}
+}
+
+#egg {
+	display: block;
+	position: absolute;
+	z-index: 5;
+	width: 126px;
+	height: 150px;
+	background: linear-gradient(to top, #2f2333, #e6ad3b,#ffd98c);
+	transform: rotate(70deg);
+	border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+	translate: 80px 280px;
+  }
+
+#egglight {
+	position: absolute;
+	z-index: 6;
+	width: 20px;
+	height: 20px;
+	background: rgb(255, 246, 147);
+	border-radius: 50%;
+	filter: blur(5px);
+	translate: 140px 340px;
+  }
+
+.egg {
+	z-index: 100;
+	animation: wiggle 2.5s linear infinite;
+}
+
+@keyframes wiggle {
+	0%, 1% {
+	  transform: rotateZ(0);
+	}
+	5% {
+	  transform: rotateZ(-2deg);
+	}
+	10% {
+	  transform: rotateZ(2deg);
+	}
+	15% {
+	  transform: rotateZ(-2deg);
+	}
+	20%, 100% {
+	  transform: rotateZ(0);
+	}
+  }
+
+#cloth {
+	position: absolute;
+	z-index: -3;
+	width: 250px;
+	height: 50px;
+	transform: skew(-50deg) rotate(5deg);
+	background: linear-gradient(to top right, #300a28, #314860, #7dc0dc,#97d3ed);
+	translate: 480px 380px;
+  }
+
+#ball {
+	position: absolute;
+	z-index: -2;
+	width: 140px;
+	height: 140px;
+	background: linear-gradient(to bottom, #20001f, #4e4459, #20001b);
+	border-radius: 50%;
+	translate: 500px 270px;
+  }
+
+#tape {
+	position: absolute;
+	z-index: 90;
+	width: 80px;
+	height: 140px;
+	border-radius: 25%;
+	background: linear-gradient(to bottom, #efd9a1,#310202, #654f67, #300404);
+	translate: 520px 350px;
+  }
+
+#tapehole {
+	position: absolute;
+	z-index: 91;
+	width: 10px;
+	height: 110px;
+	background: rgb(160, 116, 14);
+	border-radius: 5px / 60px;
+	translate: 585px 365px;
+  }
+
+.tape {
+	z-index: 100;
+	animation: flo 4s infinite;
+}
+
+@keyframes flo{
+	50%{
+	  transform: translateY(30px);
+	}
+  }
