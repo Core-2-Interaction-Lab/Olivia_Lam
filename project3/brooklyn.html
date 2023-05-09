@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brooklyn</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway+Dots&family=Raleway:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="navbar">
+        <a href="index.html">Return</a>
+    </div>
+
+<div id="chartdiv">
+    <p id="chartTitle">Street Pavement Ratings of Brooklyn</p>
+
+    <canvas id="brooklynChart"></canvas>
+</div>
+
+    <img id="background" src="asset/background.jpeg">
+
+    <div id="polediv">
+        <img id="pole" src="asset/pole.png">
+    </div>
+
+    <div id="trafficlight">
+        <img id="whitemango" src="asset/whitemango.png">
+        <p class="trafficlight" id="trafficlightnumber">8/10</p>
+        <img id="lightholder" src="asset/lightholder.png">
+    </div>
+
+    <div id="whitesign">
+        <p id="whitesignnumber">#107192</p>
+        <p id="whitesigntext">There are 107192 streets in Brooklyn with a rating of 8 out of 10</p>
+    </div>
+
+    <div id="polediv2">
+        <img id="pole2" src="asset/pole.png">
+    </div>
+
+    <div id="yellowsign">
+        <p id="yellowsigntext">Turning<br>Vehicle</p>
+        <img id="yellowsignimg" src="asset/turnleft.png">
+        <p id="yellowsignnumber">9/10</p>
+    </div>
+
+    <div id="whitesign2">
+        <p id="whitesignnumber">#64908</p>
+        <p id="whitesigntext">There are 64908 streets in Brooklyn with a rating of 9 out of 10</p>
+    </div>
+
+    <div id="greensign">
+        <p id="greensigntext">↑ &nbsp North<br>→ &nbsp East</p>
+        <p id="greensignnumber">&nbsp&nbsp 7/10<br>&nbsp&nbsp 6/10</p>
+    </div>
+
+    <div id="whitesign3">
+        <p id="whitesignnumber">#32249<br>#28662</p>
+        <p id="whitesigntext">There are 32249 streets in Brooklyn with a rating of 7 out of 10 and 28662 streets with a rating of 6 out of 10.</p>
+    </div>
+
+    <div id="trafficlight2">
+        <img id="manhattanman" src="asset/brooklynman.png">
+        <img id="stophand" src="asset/stophand.png">
+        <img id="lightholder2" src="asset/lightholder2.png">
+    </div>
+
+    <div id="whitesign4">
+        <p id="legend">Legend</p>
+        <p class="legendtext" id="good">Good &nbsp (72.2%)</p>
+        <p class="legendtext" id="fair">Fair &nbsp (27.6%)</p>
+        <p class="legendtext" id="poor">Poor &nbsp (0.2%)</p>
+    </div>
+
+    <div id="info">
+        <p id="infoheading">Dataset Description</p>
+        <p id="infotext">
+            The Agency performs ongoing assessment of New York City streets. Ratings are based on a scale from 1 to 10, and results are grouped in the following categories:
+            <br><br>
+            <span id="infotextspan">
+            Good (%) - ratings of 8 to 10 <br>
+            Fair (%) - ratings of 4 to 7 <br>
+            Poor (%) - ratings of 1 to 3. <br>
+            </span>
+            <br>
+            Inspectors rate street conditions throughout the five boroughs using the scale above.
+        </p>
+    </div>
+
+    <script src="js/scripts2.js"></script>
+
+</body>

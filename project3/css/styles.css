@@ -1,0 +1,585 @@
+@font-face {
+    font-family: 'ClearviewHwy-3-B';
+    src: url('ClearviewHwy-Three-B.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ClearviewHwy-1-B';
+    src: url('ClearviewHwy-One-B.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ClearviewHwy-1-W';
+    src: url('ClearviewHwy-One-W.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ClearviewHwy-2-B';
+    src: url('ClearviewHwy-Two-B.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ClearviewHwy-3-W';
+    src: url('ClearviewHwy-Three-W.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ClearviewHwy-2-W';
+    src: url('ClearviewHwy-Two-W.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ClearviewHwy-5-W';
+    src: url('ClearviewHwy-Five-W.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ClearviewHwy-5-B';
+    src: url('ClearviewHwy-Five-B.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ClearviewHwy-5-W-R';
+    src: url('ClearviewHwy-Five-W-R.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ClearviewHwy-6-B';
+    src: url('ClearviewHwy-Six-B.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ClearviewHwy-4-B';
+    src: url('ClearviewHwy-Four-B.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ClearviewHwy-4-W';
+    src: url('ClearviewHwy-Four-W.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ClearviewHwy-6-W';
+    src: url('ClearviewHwy-Six-W.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway+Dots&family=Raleway:wght@100;200;300;400;500;600&display=swap');
+/* font-family: 'Raleway', sans-serif;
+font-family: 'Raleway Dots', cursive; */
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+a:link, a:hover, a:active, a:visited {
+    text-decoration: none;
+    color: #fff;
+}
+
+#navbar {
+    position: fixed;
+    z-index: 100;
+    font-family: 'ClearviewHwy-5-W', sans-serif;
+    font-size: 1.5em;
+    color: #fff;
+    background-color: #01735C;
+    border-radius: 10px;
+    border: double 5px #fff;
+    margin: 20px;
+    padding: 10px 20px 10px 20px;
+    transition: top 0.5s;
+}
+
+#navbar:hover {
+    filter: drop-shadow(0 0 0.25rem #ffffff);
+}
+
+
+#chartdiv {
+    margin: 30px;
+    top: 15%;
+}
+
+#chartdiv, #manhattanChart {
+    position: fixed;
+    z-index: 2;
+    height: 100vh;
+    width: 75vh;
+    font-family: 'Raleway', sans-serif;
+}
+
+#manhattanChart, #queensChart, #brooklynChart, #bronxChart, #statenChart {
+    background-color: rgba(255, 244, 233, 0.8);
+    border-radius: 10px;
+} 
+
+#chartTitle {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    font-weight: 100;
+    color: #fff;
+}
+
+#background {
+    position: fixed;
+    z-index: 0;
+    filter: blur(8px);
+    width: 110%;
+    height: 110%;
+    left: -5%;
+    top: -5%;
+}
+
+#pole {
+    width: 35px;
+    max-height: max-content;
+    filter: drop-shadow(0 0 0.25rem #696969);
+}
+
+#polediv {
+    z-index: 9;
+    position: fixed;
+    left: 50%;
+    transform: translate(-100%,0%);
+}
+
+#signsdiv {
+    z-index: 10;
+    position: absolute;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(0, -50%);
+    /* filter: drop-shadow(0.25rem 0.25rem 0.25rem #696969); */
+}
+
+.signs {
+    font-family: 'ClearviewHwy-5-B', sans-serif;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+    border-radius: 10px;
+    border: double 5px #fff;
+    background-color: #01735C;
+    padding: 15px;
+    max-width: fit-content;
+}
+
+#brooklyn, #bronx, #manhattan, #staten, #queens {
+    margin-top: 25px;
+}
+
+.signs:hover {
+    cursor: pointer;
+    filter: drop-shadow(0 0 1rem #01735C);
+    transform: scale(1.2);
+    transition: 0.5s ease-in-out;
+    transform-origin: left;
+}
+
+#intro {
+    z-index: 1;
+    margin: 0;
+    padding: 3%;
+    position: absolute;
+    z-index: 4;
+    background-color: rgba(255, 244, 233);
+    border-radius: 10px;
+    top: 50%;
+    transform: translate(0%, -50%);
+    left: 5%;
+    width: 30%;
+    min-width: 220px;
+    height: fit-content;
+    filter: drop-shadow(0 0 0.25rem #01735C);
+}
+
+.heading {
+    margin: 0;
+}
+
+#streetpavement {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+#ratingdiv {
+    position: relative;
+    top: -10px;
+    left: -5px;
+}
+
+#ratings {
+    font-family: 'Raleway Dots', sans-serif;
+    font-size: 4em;
+    color: #01735C;
+}
+
+#introtext{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+    
+}
+
+#trafficlightnumber {
+    font-family: 'ClearviewHwy-6-B', sans-serif;
+    color: #D98467;
+    font-size: 3em;
+    border-radius: 10px;
+    background-color: #14192C;
+    padding: 20px 10px 20px 90px;
+    width: fit-content;
+    border: solid 5px #D58003;
+    margin-left: 25%;
+}
+
+#whitemango {
+    max-height: 90px;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 34%;
+    top: 28%;
+}
+
+#lightholder {
+    position: absolute;
+    margin: 0;
+    max-height: 163px;
+    top: 12%;
+    left: -1%;
+}
+
+#trafficlight {
+    position: absolute;
+    left: 50%;
+    z-index: 12;
+}
+
+#whitesign {
+    z-index: 15;
+    background-color: white;
+    color: #000;
+    border: double 5px #000;
+    border-radius: 10px;
+    margin: 0;
+    position: absolute;
+    max-width: fit-content;
+    padding: 2% 2% 1% 2%;
+    filter: drop-shadow(0 0 0.25rem #696969);
+    left: 50%;
+    top: 40%;
+    transform: translate(-60%,-50%);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#whitesign2 {
+    z-index: 15;
+    background-color: white;
+    color: #000;
+    border: double 5px #000;
+    border-radius: 10px;
+    margin: 0;
+    position: absolute;
+    max-width: fit-content;
+    padding: 2% 2% 1% 2%;
+    text-align: center;
+    filter: drop-shadow(0 0 0.25rem #696969);
+    left: 50%;
+    top: 100%;
+    transform: translate(-60%,-50%);
+}
+
+#whitesign3 {
+    z-index: 15;
+    background-color: white;
+    color: #000;
+    border: double 5px #000;
+    border-radius: 10px;
+    margin: 0;
+    position: absolute;
+    max-width: fit-content;
+    padding: 2% 1% 1% 1%;
+    filter: drop-shadow(0 0 0.25rem #696969);
+    left: 50%;
+    top: 166%;
+    transform: translate(-60%,-50%);
+    text-align: center;
+}
+
+#whitesignnumber {
+    padding: 0;
+    margin: 0;
+    font-size: 2.5em;
+    font-family: 'ClearviewHwy-3-B', sans-serif;
+    line-height: 1em;
+}
+
+#whitesigntext {
+    padding:0;
+    font-size: 1em;
+    font-family: 'ClearviewHwy-3-W', sans-serif;
+    max-width: 165px;
+    line-height: 1em;
+}
+
+#pole2 {
+    width: 35px;
+    max-height: max-content;
+    filter: drop-shadow(0 0 0.25rem #696969);
+}
+
+#polediv2 {
+    z-index: 9;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-100%,0%);
+}
+
+#yellowsign {
+    z-index: 15;
+    background-color: #FBC411;
+    color: #000;
+    border: double 10px #000;
+    border-radius: 10px;
+    margin: 0;
+    position: absolute;
+    width: fit-content;
+    padding: 2% 1% 1% 8%;
+    text-align: center;
+    filter: drop-shadow(0 0 0.25rem #696969);
+    left: 50%;
+    top: 65%;
+    transform: translate(0%,0%);
+}
+
+#yellowsigntext {
+    padding: 0;
+    margin: 0;
+    font-size: 2em;
+    font-family: 'ClearviewHwy-5-B', sans-serif;
+    text-align: left;
+    line-height: 1em;
+}
+
+#yellowsignnumber {
+    padding:0;
+    margin: 0;
+    font-size: 3em;
+    font-family: 'ClearviewHwy-2-W', sans-serif;
+    text-align: left;
+}
+
+#yellowsignimg {
+    position: absolute;
+    z-index: 16;
+    max-width: 25%;
+    top: 33%;
+    left: 18%;
+    transform: translate(-50%,-50%);
+}
+
+#greensign {
+    z-index: 15;
+    background-color: #01735C;
+    color: #fff;
+    border: double 5px #fff;
+    border-radius: 10px;
+    margin: 0;
+    position: absolute;
+    width: fit-content;
+    padding: 2% 1% 2% 1%;
+    text-align: center;
+    filter: drop-shadow(0 0 0.25rem #696969);
+    left: 50%;
+    top: 125%;
+    font-family: 'ClearviewHwy-5-W', sans-serif;
+    font-size: 2em;
+    line-height: 1.5em;
+    display: flex;
+}
+
+#greensigntext {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    left: 0;
+}
+
+#greensignnumber {
+    padding:0;
+    margin: 0;
+    text-align: right;
+}
+
+
+#manhattanman {
+    max-height: 165px;
+    border-radius: 10px;
+    background-color: #14192C;
+    padding: 20px 20px 20px 150px;
+    width: fit-content;
+    border: solid 8px #D58003;
+    margin-left: 135px;
+    margin-top: 40px;
+    position: absolute;
+}
+
+#stophand {
+    max-height: 165px;
+    position: absolute;
+    opacity: 40%;
+    margin-top: 65px;
+    margin-left: 175px;
+}
+
+#lightholder2 {
+    position: absolute;
+    margin: 0;
+    max-height: 300px;
+    margin-left: -5px;
+}
+
+#trafficlight2 {
+    position: absolute;
+    left: 50%;
+    z-index: 20;
+    top: 198%;
+}
+
+#info {
+    display: flex;
+    position: fixed;
+    margin: 2%;
+    flex-direction: column;
+    width: 300px;
+    background-color: rgba(255, 244, 233, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 10;
+    left: 72%;
+}
+
+#infoheading {
+    font-family: 'Raleway Dots', sans-serif;
+    font-size: 3em;
+    text-align: right;
+    margin-top: 0;
+    color: #01735C;
+    line-height: 1em;
+}
+
+#infotext {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.7em;
+    text-align: justify;
+    margin-top: -30px;
+}
+
+#infotextspan {
+    font-weight: 600;
+    color: #01735C;
+}
+
+#whitesign4 {
+    z-index: 20;
+    background-color: white;
+    color: #000;
+    border: double 5px #000;
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    filter: drop-shadow(0 0 0.25rem #696969);
+    left: 50%;
+    top: 219%;
+    transform: translate(-60%,-50%);
+}
+
+#legend {
+    background-color: #000;
+    color: #fff;
+    font-family: 'ClearviewHwy-3-W', sans-serif;
+    padding: 10px 35px 10px 35px;
+    margin-top: -1px;
+    border-radius: 5px;
+    font-size: 2em;
+    margin-bottom: 0px;
+    width: 120px;
+    text-align: center;
+}
+
+.legendtext {
+    margin: 0;
+    text-align: center;
+    font-family: 'ClearviewHwy-3-B', sans-serif;
+    font-size: 1.4em;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#good {
+    margin-top: 1em;
+    color: #fff;
+    filter: drop-shadow(0 0 0.1rem #4b4b4b);
+}
+
+#fair {
+    color: #FFE769;
+}
+
+#poor {
+    margin-bottom: 1em;
+    color: #FF7A00;
+}
+
+
